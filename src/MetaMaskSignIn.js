@@ -24,12 +24,43 @@ const MetaMaskSignIn = () => {
   };
 
   return (
-    <div>
-      <h2>Sign In with MetaMask</h2>
-      <button onClick={signInWithMetaMask}>Sign In with MetaMask</button>
-      {address && <p>Address: {address}</p>}
+    <div style={styles.container}>
+      <h2 style={styles.title}>Sign In with MetaMask</h2>
+      <button style={styles.button} onClick={signInWithMetaMask}>
+        Sign In with MetaMask
+      </button>
+      {address && <p style={styles.address}>Address: {address}</p>}
     </div>
   );
+};
+
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '20px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    maxWidth: '300px',
+    margin: 'auto',
+    marginTop: '50px',
+  },
+  title: {
+    color: '#333',
+    fontSize: '24px',
+    marginBottom: '20px',
+  },
+  button: {
+    backgroundColor: '#4CAF50',
+    color: 'white',
+    padding: '10px 15px',
+    fontSize: '16px',
+    borderRadius: '4px',
+    cursor: 'pointer',
+  },
+  address: {
+    marginTop: '20px',
+    color: '#555',
+  },
 };
 
 export default MetaMaskSignIn;
